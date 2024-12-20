@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";  // Import Link from react-scroll
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
@@ -57,9 +57,18 @@ const Navbar = () => {
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              {/* Use Link from react-scroll for smooth scrolling */}
+              <Link
+                to={nav.id}  // The ID of the section to scroll to
+                smooth={true}  // Enables smooth scrolling
+                duration={500}  // Duration of the scroll in milliseconds
+                offset={-70}  // Adjust scroll position if needed (e.g., for fixed nav)
+                spy={true}  // Highlight active link when the section is in view
+                onClick={() => setActive(nav.title)}  // Update active state on click
+              >
+                {nav.title}
+              </Link>
             </li>
           ))}
         </ul>
@@ -85,12 +94,21 @@ const Navbar = () => {
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
                     active === nav.title ? "text-white" : "text-secondary"
                   }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  {/* Use Link from react-scroll for smooth scrolling */}
+                  <Link
+                    to={nav.id}  // The ID of the section to scroll to
+                    smooth={true}  // Enables smooth scrolling
+                    duration={500}  // Duration of the scroll in milliseconds
+                    offset={-70}  // Adjust scroll position if needed (e.g., for fixed nav)
+                    spy={true}  // Highlight active link when the section is in view
+                    onClick={() => {
+                      setToggle(!toggle);
+                      setActive(nav.title);
+                    }}
+                  >
+                    {nav.title}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -98,23 +116,22 @@ const Navbar = () => {
         </div>
 
         {/* Icons for all screens */}
-<div className="flex flex-row gap-4 ml-10 items-center">
-  <a
-    href="https://github.com/Emmanuel10701"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img src={github} alt="GitHub" className="w-8 h-8 object-contain" />
-  </a>
-  <a
-    href="https://www.linkedin.com/in/emmanuel-makau-40a12028b/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img src={linkedin} alt="LinkedIn" className="w-8 h-8 object-contain" />
-  </a>
-</div>
-
+        <div className="flex flex-row gap-4 ml-10 items-center">
+          <a
+            href="https://github.com/Emmanuel10701"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={github} alt="GitHub" className="w-8 h-8 object-contain" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/emmanuel-makau-40a12028b/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={linkedin} alt="LinkedIn" className="w-8 h-8 object-contain" />
+          </a>
+        </div>
       </div>
     </nav>
   );
