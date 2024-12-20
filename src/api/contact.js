@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
@@ -29,10 +28,10 @@ app.post('/api/sendEmail', async (req, res) => {
     },
   });
 
-  // Set up the email options
+  // Set up the email options for sending the message to you
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: process.env.EMAIL_USER,  // You can change this to any recipient's email
+    to: process.env.EMAIL_USER,  // Your email
     subject: `New Message from ${name}`,
     text: `Message from: ${name}\n\n${message}`,
     html: `
@@ -50,10 +49,30 @@ app.post('/api/sendEmail', async (req, res) => {
     `,
   };
 
+  // Set up the thank-you email options for the user
+  const thankYouMailOptions = {
+    from: process.env.EMAIL_USER,
+    to: email, // The user's email
+    subject: 'Thank you for reaching out!',
+    text: `Hi ${name},\n\nThank you for reaching out to me! I have received your message and will get back to you as soon as possible.\n\nBest regards,\nEmmanuel`,
+    html: `
+      <div style="font-family: Arial, sans-serif; background-color: #f4f7fc; padding: 30px; border-radius: 10px; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #333; font-size: 24px;">Hi ${name},</h2>
+        <p style="color: #555; font-size: 16px;">Thank you for reaching out to me! I have received your message and will get back to you as soon as possible.</p>
+        <p style="color: #333; font-size: 16px;">Best regards,</p>
+        <p style="color: #555; font-size: 16px;">Emmanuel</p>
+      </div>
+    `,
+  };
+
   try {
-    // Send the email
+    // Send the email to yourself
     await transporter.sendMail(mailOptions);
-    res.status(200).json({ message: 'Email sent successfully' });
+
+    // Send the thank-you email to the user
+    await transporter.sendMail(thankYouMailOptions);
+
+    res.status(200).json({ message: 'Emails sent successfully' });
   } catch (error) {
     console.error('Error sending email:', error);
     res.status(500).json({ error: 'Error sending email' });

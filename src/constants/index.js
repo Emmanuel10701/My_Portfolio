@@ -42,19 +42,19 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
+      title: "Full Stack Developer",
       icon: web,
     },
     {
-      title: "React JS Developer",
+      title: "Database Management ",
       icon: mobile,
     },
     {
-      title: "Frontend Developer",
+      title: "Backend and API Developer",
       icon: backend,
     },
     {
-      title: "UI/UX Designer",
+      title: "Machine Learning And AI Developer ",
       icon: creator,
     },
   ];
@@ -72,23 +72,23 @@ import {
       name: "JavaScript",
       icon: javascript,
     },
-    /*{
+    {
       name: "TypeScript",
       icon: typescript,
-    },*/
+    },
     {
       name: "React JS",
       icon: reactjs,
     },
-    /*{
+    {
       name: "Redux Toolkit",
       icon: redux,
-    },*/
+    },
     {
       name: "Tailwind CSS",
       icon: tailwind,
     },
-    /*{
+    {
       name: "Node JS",
       icon: nodejs,
     },
@@ -99,7 +99,7 @@ import {
     {
       name: "Three JS",
       icon: threejs,
-    },*/
+    },
     {
       name: "git",
       icon: git,
@@ -116,8 +116,8 @@ import {
   
   const experiences = [
     {
-      title: "Responsive Web Design",
-      //company_name: "Starbucks",
+      title: "Junior Full-Stack Developer",
+      company_name: "Dedan Kimathi University of Technology",
       icon: starbucks,
       iconBg: "#383E56",
       date: "Design for every device.",
@@ -129,7 +129,7 @@ import {
     },
     {
       title: "User-Centered UI/UX Prototyping",
-      //company_name: "Tesla",
+      company_name: "Open Source Projects",
       icon: tesla,
       iconBg: "#E6DEDD",
       date: "Users first, always",
@@ -141,7 +141,7 @@ import {
     },
     {
       title: "Frontend Development with React JS",
-      //company_name: "Shopify",
+      company_name: "My Projects",
       icon: shopify,
       iconBg: "#383E56",
       date: "Dynamic, scalable apps.",
@@ -153,7 +153,7 @@ import {
     },
     {
       title: "JavaScript-Based Interactive Web Applications",
-      //company_name: "Meta",
+      company_name: "My Projects",
       icon: meta,
       iconBg: "#E6DEDD",
       date: "Interactive web magic.",
@@ -202,10 +202,10 @@ import {
           name: "react",
           color: "blue-text-gradient",
         },
-        /*{
+        {
           name: "mongodb",
           color: "green-text-gradient",
-        },*/
+        },
         {
           name: "tailwind",
           color: "pink-text-gradient",
