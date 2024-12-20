@@ -4,6 +4,8 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const formRef = useRef();
@@ -47,7 +49,7 @@ const Contact = () => {
 
       if (response.ok) {
         setLoading(false);
-        alert("Thank you! I will get back to you as soon as possible.");
+        toast.success("Thank you! I will get back to you as soon as possible.");
 
         // Clear the form after successful submission
         setForm({
@@ -57,12 +59,12 @@ const Contact = () => {
         });
       } else {
         setLoading(false);
-        alert(data.error || "Something went wrong. Please try again.");
+        toast.error(data.error || "Something went wrong. Please try again.");
       }
     } catch (error) {
       setLoading(false);
       console.error("Error sending email:", error);
-      alert("An error occurred. Please try again.");
+      toast.error("An error occurred. Please try again.");
     }
   };
 
@@ -88,7 +90,8 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-2 border-secondary font-medium'
+              style={{ borderColor: '#f39c12' }}
             />
           </label>
           <label className='flex flex-col'>
@@ -99,7 +102,8 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-2 border-secondary font-medium'
+              style={{ borderColor: '#f39c12' }}
             />
           </label>
           <label className='flex flex-col'>
@@ -110,15 +114,21 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-2 border-secondary font-medium'
+              style={{ borderColor: '#f39c12' }}
             />
           </label>
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            className="bg-gradient-to-r from-teal-600 to-blue-500 hover:from-teal-700 hover:to-blue-600 text-white py-2 px-4 w-40 md:w-44 lg:w-48 rounded-full text-sm md:text-base lg:text-lg flex items-center justify-center mt-6"
+            disabled={loading}
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? (
+              <span>Sending...</span>
+            ) : (
+              'Send'
+            )}
           </button>
         </form>
       </motion.div>
@@ -129,6 +139,9 @@ const Contact = () => {
       >
         <EarthCanvas />
       </motion.div>
+
+      {/* ToastContainer positioned at the bottom */}
+      <ToastContainer position="bottom-center" autoClose={5000} hideProgressBar />
     </div>
   );
 };
