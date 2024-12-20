@@ -1,9 +1,15 @@
-import logo from "./logo.svg";
+import logo from "./elogo.webp";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
+import django from "./django.png";
+import tensorflow from "./tensor.png";
+import next from "./django.png";
+import SQL from "./django.png";
+import Pytorch from "./pyttorch.png";
+import linkedin from "./linkedin2.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -19,7 +25,11 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import doctor from "./d1.png";
+import University from "./university.png";
+import blog from "./blog.png";
+import rental from "./ap3.png";
+import comerce from "./comerce.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -30,11 +40,29 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+
+
+
+
+
+
+
 export {
   logo,
+  comerce,
+  University,
+  doctor,
+  blog,
+  rental,
+  tensorflow,
+  next,
+  SQL,
+  Pytorch,
   backend,
   creator,
   mobile,
+  django,
+  linkedin,
   web,
   github,
   menu,
@@ -51,7 +79,6 @@ export {
   redux,
   tailwind,
   typescript,
-  threejs,
   meta,
   shopify,
   starbucks,

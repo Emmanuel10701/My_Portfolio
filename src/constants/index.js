@@ -13,16 +13,22 @@ import {
     nodejs,
     mongodb,
     git,
-    figma,
-    docker,
+    carrent,
+    jobit,
+    tripguide,
     meta,
     starbucks,
     tesla,
     shopify,
-    carrent,
-    jobit,
-    tripguide,
-    threejs,
+    django,
+    SQL,
+    tensorflow,
+    next,
+    Pytorch,
+    University,
+    doctor,
+    rental,
+    blog,
   } from "../assets";
   
   export const navLinks = [
@@ -50,15 +56,17 @@ import {
       icon: mobile,
     },
     {
-      title: "Backend and API Developer",
+      title: "Backend and API  Developer",
       icon: backend,
     },
     {
-      title: "Machine Learning And AI Developer ",
+      title: "Machine Learning And AI  Developer ",
       icon: creator,
     },
   ];
+ 
   
+
   const technologies = [
     {
       name: "HTML 5",
@@ -96,27 +104,37 @@ import {
       name: "MongoDB",
       icon: mongodb,
     },
-    {
-      name: "Three JS",
-      icon: threejs,
-    },
+   
     {
       name: "git",
       icon: git,
     },
     {
-      name: "figma",
-      icon: figma,
+      name: "django",
+      icon: django,
     },
-    /*{
-      name: "docker",
-      icon: docker,
-    },*/
+    {
+      name: "next-gen",
+      icon: next,
+    },
+    {
+      name: "pytorch",
+      icon: Pytorch,
+    },
+    {
+      name: "SQL",
+      icon: SQL,
+    },
+    {
+      name: "tesorflow",
+      icon: tensorflow,
+    },
+   
   ];
   
   const experiences = [
     {
-      title: "Junior Full-Stack Developer",
+      title: "Full-Stack Developer",
       company_name: "Dedan Kimathi University of Technology",
       icon: starbucks,
       iconBg: "#383E56",
@@ -128,7 +146,7 @@ import {
       ],
     },
     {
-      title: "User-Centered UI/UX Prototyping",
+      title: "Next.js Full-Stack Development",
       company_name: "Open Source Projects",
       icon: tesla,
       iconBg: "#E6DEDD",
@@ -140,7 +158,7 @@ import {
       ],
     },
     {
-      title: "Frontend Development with React JS",
+      title: "Frontend Development with React",
       company_name: "My Projects",
       icon: shopify,
       iconBg: "#383E56",
@@ -152,15 +170,15 @@ import {
       ],
     },
     {
-      title: "JavaScript-Based Interactive Web Applications",
+      title: "Backend & Machine Learning with Django and tensorflow",
       company_name: "My Projects",
       icon: meta,
       iconBg: "#E6DEDD",
       date: "Interactive web magic.",
       points: [
         "Developed interactive web applications using JavaScript.",
-        "Enhanced user engagement with features like animations, event handling, and real-time updates.",
-        "Emphasized fast load times and smooth transitions.",
+        "Built backend services with Django and Django REST Framework.",
+        "Created machine learning models with TensorFlow for enhanced user interaction.",
       ],
     },
   ];
@@ -168,35 +186,58 @@ import {
   const testimonials = [
     {
       testimonial:
-        "I studied at Dhammissara National College for my GCE Ordinary Level, where I completed ICT along with other core subjects.",
-      name: "Dhammissara National College",
-      designation: "[2015-2017]",
-      company: "Ordinary Level Student",
-      image: "https://th.bing.com/th/id/R.dbf9bfb822363e893d867c7f804f5458?rik=YVYmnRpU0QWcCA&riu=http%3a%2f%2f2.bp.blogspot.com%2f-nkjD3D10tGQ%2fTkwSpY1aqII%2fAAAAAAAAAC0%2fWkhIDvZJbUQ%2fs1600%2fdnc.jpg&ehk=VflnvaQXyZpbBETrZRjIEvVaruGUGQojJVbjpg5tT6s%3d&risl=&pid=ImgRaw&r=0",
-    },
-    {
-      testimonial:
-        "I studied at Dhammissara National College for my GCE Advanced Level, focusing on the Physical Science stream with ICT as a subject.",
-      name: "Dhammissara National College",
-      designation: "[2018-2020]",
-      company: "Advanced Level Student",
-      image: "https://th.bing.com/th/id/R.dbf9bfb822363e893d867c7f804f5458?rik=YVYmnRpU0QWcCA&riu=http%3a%2f%2f2.bp.blogspot.com%2f-nkjD3D10tGQ%2fTkwSpY1aqII%2fAAAAAAAAAC0%2fWkhIDvZJbUQ%2fs1600%2fdnc.jpg&ehk=VflnvaQXyZpbBETrZRjIEvVaruGUGQojJVbjpg5tT6s%3d&risl=&pid=ImgRaw&r=0",
-    },
-    {
-      testimonial:
-        "I am pursuing a degree in Computing and Information Systems, developing skills in software development, UI/UX design, and frontend technologies.",
-      name: "Sabaragamuwa University of Sri Lanka",
+        "I pursued my studies at Dedan Kimathi University of Technology, where I not only excelled academically but also honed my leadership skills, contributing to both my personal and professional growth.",
+      name: "Dedan Kimathi University of Technology",
       designation: "[2022-Present]",
+      company: "Student with Academic Excellence and Leadership Skills",
+      image: University,
+    },
+    {
+      testimonial:
+        "During my time at Dedan Kimathi University of Technology, I focused on developing strong leadership abilities while maintaining a high academic performance, which enabled me to contribute effectively to various student activities.",
+      name: "Dedan Kimathi University of Technology",
+      designation: "[2022-Present]",
+      company: "Leadership and Academic Excellence",
+      image: University,
+    },
+    
+    {
+      testimonial:
+ " I am pursuing a degree in Mathematics and Statistics, developing a strong foundation in data analysis, statistical modeling, mathematical problem-solving, and software development."  ,    
+      name: "Dedan Kimathi University of Technology",
+      designation: "[2021-Present]",
       company: "Undergraduate Student",
-      image: "https://th.bing.com/th/id/OIP.ti4t1nEdN7yKcEVvm87-8wHaHa?rs=1&pid=ImgDetMain",
+      image: University,
     },
   ];
   
   const projects = [
     {
-      name: "Modern Bank App",
+      name: "Doctors",
       description:
-        "Built a fully responsive website using React JS and Tailwind CSS, featuring a stunning hero section, business stats, reusable components, call-to-action buttons, and testimonials.",
+        "A platform for doctors to manage appointments, patient data, and more.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "nodejs",
+          color: "green-text-gradient",
+        },
+        {
+          name: "mongodb",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: doctor, // Using the imported doctor image
+      source_code_link: "https://github.com/your-repo/Doctors",
+      live_site_link: "https://healthcare-project-sepia.vercel.app/",
+    },
+    {
+      name: "Blog",
+      description:
+        "A dynamic blog platform allowing users to post and manage articles.",
       tags: [
         {
           name: "react",
@@ -211,51 +252,34 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/hirushavinushka99/Modern-Bank-App",
+      image: blog, // Using the imported blog image
+      source_code_link: "https://github.com/your-repo/Blog",
+      live_site_link: "https://developers-home.vercel.app/",
     },
     {
-      name: "Expense Tracker App",
+      name: "Rental",
       description:
-        "A React-based Expense Tracker app using useState, useContext, useReducer, and the Context API for efficient state management, providing real-time income and expense tracking.",
+        "A rental platform for managing properties, booking, and customer interactions.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "contextapi",
+          name: "nodejs",
           color: "green-text-gradient",
         },
-        /*{
-          name: "scss",
-          color: "pink-text-gradient",
-        },*/
-      ],
-      image: jobit,
-      source_code_link: "https://github.com/hirushavinushka99/Expense-Tracker",
-    },
-    {
-      name: "Millionaire Quiz App",
-      description:
-        "Developed a Who Wants to Be a Millionaire trivia quiz app using React hooks for state management, lifelines, score tracking, and responsive design, showcasing interactive web application skills.",
-      tags: [
         {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        /*{
-          name: "supabase",
-          color: "green-text-gradient",
-        },*/
-        {
-          name: "css",
+          name: "mongodb",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/hirushavinushka99/React-Millionaire-Quiz-App",
+      image: rental, // Using the imported rental image
+      source_code_link: "https://github.com/your-repo/Rental",
+      live_site_link: "https://apartments-site-rental.vercel.app/",
     },
   ];
+  
+
   
   export { services, technologies, experiences, testimonials, projects };

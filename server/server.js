@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 
 // POST route for sending email
-app.post('/api/sendEmail', async (req, res) => {
+app.post('/api/server', async (req, res) => {
   const { name, email, message } = req.body;
 
   // Validate input fields
