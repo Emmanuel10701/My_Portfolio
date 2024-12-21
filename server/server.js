@@ -1,17 +1,14 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
-const dotenv = require('dotenv');
+import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
 
-// Load environment variables from .env file
-dotenv.config();
+dotenv.config(); // Load environment variables from .env file
 
-const app = express();
+export default async function handler(req, res) {
+  // Only allow POST requests
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
 
-// Middleware to parse JSON request body
-app.use(express.json());
-
-// POST route for sending email
-app.post('/api/server', async (req, res) => {
   const { name, email, message } = req.body;
 
   // Validate input fields
@@ -19,19 +16,21 @@ app.post('/api/server', async (req, res) => {
     return res.status(400).json({ error: 'Name, email, and message are required' });
   }
 
-  // Create a transporter using SMTP service (e.g., Gmail)
+  // Create a transporter using a custom SMTP server
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.example.com', // Replace with your SMTP server hostname
+    port: 587, // Use 465 for SSL or 587 for TLS
+    secure: false, // Set true if port is 465 (SSL)
     auth: {
-      user: process.env.EMAIL_USER,  // Get email user from .env file
-      pass: process.env.EMAIL_PASS,  // Get email pass from .env file
+      user: process.env.EMAIL_USER, // Your SMTP username
+      pass: process.env.EMAIL_PASS, // Your SMTP password
     },
   });
 
   // Set up the email options for sending the message to you
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: process.env.EMAIL_USER,  // Your email
+    to: process.env.EMAIL_USER, // Your email
     subject: `New Message from ${name}`,
     text: `Message from: ${name}\n\n${message}`,
     html: `
@@ -77,10 +76,4 @@ app.post('/api/server', async (req, res) => {
     console.error('Error sending email:', error);
     res.status(500).json({ error: 'Error sending email' });
   }
-});
-
-// Start the server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+}
