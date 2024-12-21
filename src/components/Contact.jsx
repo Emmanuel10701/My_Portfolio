@@ -6,6 +6,7 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Mail, Phone } from 'lucide-react';
 
 const Contact = () => {
   const formRef = useRef();
@@ -76,6 +77,18 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
+
+        {/* Contact Information Section */}
+        <div className='flex flex-col gap-4 mt-4'>
+          <div className='flex items-center gap-2'>
+            <Mail className='text-white w-6 h-6' />
+            <span className='text-white text-lg'>emmanuelmakau90@gmail.com</span>
+          </div>
+          <div className='flex items-center gap-2'>
+            <Phone className='text-white w-6 h-6' />
+            <span className='text-white text-lg'>0793472960</span>
+          </div>
+        </div>
 
         <form
           ref={formRef}
