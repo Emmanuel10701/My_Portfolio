@@ -1,8 +1,0 @@
-POST http://localhost:5000/backend/server/server.js
-Content-Type: application/json
-
-{
-  "name": "Emmanuel",
-  "email": "emmanuel@example.com",
-  "message": "This is a test message"
-}
