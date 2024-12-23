@@ -193,30 +193,30 @@ import {
   const testimonials = [
     {
       testimonial:
-        "I pursued my studies at Dedan Kimathi University of Technology, where I not only excelled academically but also honed my leadership skills, contributing to both my personal and professional growth.",
+        "At Dedan Kimathi University of Technology, I excelled academically and developed a strong passion for full-stack software development, which fueled my career aspirations.",
       name: "Dedan Kimathi University of Technology",
-      designation: "[2022-Present]",
-      company: "Student with Academic Excellence and Leadership Skills",
+      designation: "[2022-2024]",
+      company: "Student with Academic Excellence and Passion for Full-Stack Development",
       image: University,
     },
     {
       testimonial:
-        "During my time at Dedan Kimathi University of Technology, I focused on developing strong leadership abilities while maintaining a high academic performance, which enabled me to contribute effectively to various student activities.",
+        "My time at Dedan Kimathi University of Technology helped me focus on leadership and academic growth, preparing me to contribute effectively in various activities.",
       name: "Dedan Kimathi University of Technology",
-      designation: "[2022-Present]",
+      designation: "[2022-2024]",
       company: "Leadership and Academic Excellence",
       image: University,
     },
-    
     {
       testimonial:
- " I am pursuing a degree in Mathematics and Statistics, developing a strong foundation in data analysis, statistical modeling, mathematical problem-solving, and software development."  ,    
+        "Currently pursuing a degree in Mathematics and Statistics, I’m building a strong foundation in data analysis, statistics, and software development, fueling my passion for technology.",
       name: "Dedan Kimathi University of Technology",
-      designation: "[2021-Present]",
+      designation: "[2021-2024]",
       company: "Undergraduate Student",
       image: University,
     },
   ];
+  
   
   const projects = [
     {
