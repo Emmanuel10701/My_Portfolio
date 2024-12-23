@@ -7,6 +7,7 @@ import github from "./github.png";
 import django from "./django.png";
 import tensorflow from "./tensor.png";
 import next from "./next.png";
+import python from "./python-logo.png";
 import SQL from "./SQL.png";
 import Pytorch from "./pyttorch.png";
 import linkedin from "./linkedin2.png";
@@ -55,6 +56,7 @@ export {
   doctor,
   resune,
   blog,
+  python,
   rental,
   tensorflow,
   next,

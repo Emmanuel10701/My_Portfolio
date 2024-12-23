@@ -11,6 +11,7 @@ import {
     tailwind,
     nodejs,
     mongodb,
+    python,
     git,
     carrent,
     jobit,
@@ -69,13 +70,14 @@ import {
   const technologies = [
     
     {
-      name: "CSS 3",
-      icon: css,
-    },
-    {
       name: "JavaScript",
       icon: javascript,
     },
+    {
+      name: "CSS 3",
+      icon: css,
+    },
+  
     {
       name: "TypeScript",
       icon: typescript,
@@ -84,10 +86,7 @@ import {
       name: "React JS",
       icon: reactjs,
     },
-    {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
+   
     {
       name: "Tailwind CSS",
       icon: tailwind,
@@ -125,7 +124,11 @@ import {
       name: "tesorflow",
       icon: tensorflow,
     },
-   
+    
+    {
+      name: "Python",
+      icon: python,
+    },
   ];
   
   const experiences = [

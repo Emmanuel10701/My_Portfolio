@@ -1,74 +1,15 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Mail, Phone } from 'lucide-react';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Contact = () => {
-  const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [loading, setLoading] = useState(false);
-
-  const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    try {
-      // Send form data to the backend API (Assuming the API is located at '/api/sendEmail')
-      const response = await fetch("/service/api", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
-          message: form.message,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setLoading(false);
-        toast.success("Thank you! I will get back to you as soon as possible.");
-
-        // Clear the form after successful submission
-        setForm({
-          name: "",
-          email: "",
-          message: "",
-        });
-      } else {
-        setLoading(false);
-        toast.error(data.error || "Something went wrong. Please try again.");
-      }
-    } catch (error) {
-      setLoading(false);
-      console.error("Error sending email:", error);
-      toast.error("An error occurred. Please try again.");
-    }
-  };
-
   return (
     <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
       <motion.div
@@ -76,85 +17,64 @@ const Contact = () => {
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <h3 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-500 to-green-500 text-transparent bg-clip-text">
+          Contact Me.
+        </h3>
 
         {/* Contact Information Section */}
         <div className='flex flex-col gap-4 mt-4'>
-  <div className='flex items-center gap-2'>
-    <Mail className='text-white w-6 h-6' />
-    <a
-      href='mailto:emmanuelmakau90@gmail.com'
-      className='text-white text-lg hover:underline'
-    >
-      emmanuelmakau90@gmail.com
-    </a>
-  </div>
-  <div className='flex items-center gap-2'>
-    <Phone className='text-white w-6 h-6' />
-    <a
-      href='tel:0793472960'
-      className='text-white text-lg hover:underline'
-    >
-      0793472960
-    </a>
-  </div>
-</div>
+          <div className='flex items-center gap-2'>
+            <Mail className='text-white w-6 h-6' />
+            <a
+              href='mailto:emmanuelmakau90@gmail.com'
+              className='text-white text-lg hover:underline'
+            >
+              emmanuelmakau90@gmail.com
+            </a>
+          </div>
+          <div className='flex items-center gap-2'>
+            <Phone className='text-white w-6 h-6' />
+            <a
+              href='tel:0793472960'
+              className='text-white text-lg hover:underline'
+            >
+              0793472960
+            </a>
+          </div>
+        </div>
 
+        {/* Paragraph Section */}
+        <div className='flex flex-col gap-6 mt-6'>
+        <div>
+        <p className="text-white text-lg">
+          As a junior full-stack developer, I am passionate about building modern, responsive applications. With a solid foundation in both frontend and backend development, I strive to create solutions that meet your business needs while ensuring scalability and efficiency.
+        </p>
+        <p className="text-white text-lg mt-4">
+          While I currently have a basic understanding of Artificial Intelligence, I am committed to growing my expertise in this field. In the years to come, I hope to help businesses like yours integrate AI features that enhance productivity and drive innovation. Let’s work together to lay the groundwork for a tech-savvy future.
+        </p>
+      </div>
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
-        >
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
-            <input
-              type='text'
-              name='name'
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-2 border-secondary font-medium'
-              style={{ borderColor: '#f39c12' }}
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
-            <input
-              type='email'
-              name='email'
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-2 border-secondary font-medium'
-              style={{ borderColor: '#f39c12' }}
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
-            <textarea
-              rows={7}
-              name='message'
-              value={form.message}
-              onChange={handleChange}
-              placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-2 border-secondary font-medium'
-              style={{ borderColor: '#f39c12' }}
-            />
-          </label>
+        </div>
 
-          <button
-            type='submit'
-            className="bg-gradient-to-r from-teal-600 to-blue-500 hover:from-teal-700 hover:to-blue-600 text-white py-2 px-4 w-40 md:w-44 lg:w-48 rounded-full text-sm md:text-base lg:text-lg flex items-center justify-center mt-6"
-            disabled={true}
+        {/* LinkedIn and GitHub Links Section */}
+        <div className="flex gap-6 mt-6">
+          <a
+            href="https://www.linkedin.com/in/emmanuel-makau-40a12028b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-2xl hover:text-blue-600"
           >
-            {loading ? (
-              <span>Sending...</span>
-            ) : (
-              'Send'
-            )}
-          </button>
-        </form>
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://github.com/Emmanuel10701"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-2xl hover:text-gray-900"
+          >
+            <FaGithub />
+          </a>
+        </div>
       </motion.div>
 
       <motion.div
@@ -164,7 +84,6 @@ const Contact = () => {
         <EarthCanvas />
       </motion.div>
 
-      {/* ToastContainer positioned at the bottom */}
       <ToastContainer position="bottom-center" autoClose={5000} hideProgressBar />
     </div>
   );
