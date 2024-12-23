@@ -1,10 +1,8 @@
-### Test POST request to sendEmail API
-
 POST http://localhost:5000/backend/server/server.js
 Content-Type: application/json
 
 {
-  "name": "John Doe",
-  "email": "johndoe@example.com",
-  "message": "Hello, I would like more information about your services!"
+  "name": "Emmanuel",
+  "email": "emmanuel@example.com",
+  "message": "This is a test message"
 }

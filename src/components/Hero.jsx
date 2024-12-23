@@ -37,13 +37,14 @@ const Hero = () => {
           <div className='w-1 sm:h-80 h-40 violet-gradient' />
         </div>
 
-        <div className="md:mb-10 mb-6">
+        <div className="md:mb-[17%] mb-6">
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className='bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent'>Emmanuel</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100 text-lg`}>
+          <p className="mt-2 text-white-100 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
             I design user interfaces with a focus on usability, build dynamic frontend applications using React and Next.js, and develop robust backend systems with Django and Node.js for seamless integration and efficient data handling.
           </p>
+
         </div>
       </div>
 

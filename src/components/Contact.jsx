@@ -146,7 +146,7 @@ const Contact = () => {
           <button
             type='submit'
             className="bg-gradient-to-r from-teal-600 to-blue-500 hover:from-teal-700 hover:to-blue-600 text-white py-2 px-4 w-40 md:w-44 lg:w-48 rounded-full text-sm md:text-base lg:text-lg flex items-center justify-center mt-6"
-            disabled={loading}
+            disabled={true}
           >
             {loading ? (
               <span>Sending...</span>

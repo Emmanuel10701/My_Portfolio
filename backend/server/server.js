@@ -12,8 +12,8 @@ const app = express();
 app.use(cors());  // Enable CORS to allow requests from frontend
 app.use(json());  // Parse JSON requests
 
-// POST route for sending email
-app.post('/backend/server/server', async (req, res) => {
+// POST route for sending email (use this for actual form submissions)
+app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body;
 
   // Validate input fields
@@ -21,6 +21,12 @@ app.post('/backend/server/server', async (req, res) => {
     return res.status(400).json({ error: 'Name, email, and message are required' });
   }
 
+  // Send the email
+  await sendEmail(name, email, message, res);
+});
+
+// Function to send emails
+const sendEmail = async (name, email, message, res) => {
   // Create a transporter using SMTP service (e.g., Gmail)
   const transporter = createTransport({
     service: 'gmail',
@@ -30,7 +36,7 @@ app.post('/backend/server/server', async (req, res) => {
     },
   });
 
-  // Set up the email options for sending the message to you
+  // Set up the email options for sending the message to you (admin)
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: process.env.EMAIL_USER,  // Your email
@@ -46,7 +52,7 @@ app.post('/backend/server/server', async (req, res) => {
           <p style="color: #333; font-size: 16px;"><strong>Message:</strong></p>
           <p style="color: #555; font-size: 16px;">${message}</p>
         </div>
-        <p style="font-size: 12px; color: #777; margin-top: 20px;">This email was sent from your contact form.Please connect the talk with your client to start a conversation with your work and grow your career.</p>
+        <p style="font-size: 12px; color: #777; margin-top: 20px;">This email was sent from your contact form. Please connect with your client to start a conversation and grow your career.</p>
       </div>
     `,
   };
@@ -68,7 +74,7 @@ app.post('/backend/server/server', async (req, res) => {
   };
 
   try {
-    // Send the email to yourself
+    // Send the email to yourself (admin)
     await transporter.sendMail(mailOptions);
 
     // Send the thank-you email to the user
@@ -79,7 +85,7 @@ app.post('/backend/server/server', async (req, res) => {
     console.error('Error sending email:', error);
     res.status(500).json({ error: 'Error sending email' });
   }
-});
+};
 
 // Start the server
 const PORT = process.env.PORT || 5000;
