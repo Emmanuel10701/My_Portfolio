@@ -43,7 +43,7 @@ const Hero = () => {
             <h1 className={`${styles.heroHeadText} text-white text-3xl sm:text-4xl md:text-5xl lg:text-5xl`}>
               Hi, I'm <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">Emmanuel</span>
             </h1>
-            <p className="mt-2 text-white-100 text-base text-center sm:text-md md:text-lg lg:text-xl">
+            <p className="mt-2 text-white-100 text-base  sm:text-md md:text-lg lg:text-xl">
               I am a full-stack developer specializing in front-end technologies like React and Next.js, back-end systems with Django and Node.js, and data management with SQL and NoSQL databases. Additionally, I explore machine learning with TensorFlow to build neural networks for intelligent web applications.
             </p>
           </div>
