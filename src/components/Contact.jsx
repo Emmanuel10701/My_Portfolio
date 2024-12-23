@@ -80,15 +80,26 @@ const Contact = () => {
 
         {/* Contact Information Section */}
         <div className='flex flex-col gap-4 mt-4'>
-          <div className='flex items-center gap-2'>
-            <Mail className='text-white w-6 h-6' />
-            <span className='text-white text-lg'>emmanuelmakau90@gmail.com</span>
-          </div>
-          <div className='flex items-center gap-2'>
-            <Phone className='text-white w-6 h-6' />
-            <span className='text-white text-lg'>0793472960</span>
-          </div>
-        </div>
+  <div className='flex items-center gap-2'>
+    <Mail className='text-white w-6 h-6' />
+    <a
+      href='mailto:emmanuelmakau90@gmail.com'
+      className='text-white text-lg hover:underline'
+    >
+      emmanuelmakau90@gmail.com
+    </a>
+  </div>
+  <div className='flex items-center gap-2'>
+    <Phone className='text-white w-6 h-6' />
+    <a
+      href='tel:0793472960'
+      className='text-white text-lg hover:underline'
+    >
+      0793472960
+    </a>
+  </div>
+</div>
+
 
         <form
           ref={formRef}

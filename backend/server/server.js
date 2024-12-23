@@ -25,8 +25,8 @@ app.post('/backend/server/server', async (req, res) => {
   const transporter = createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.EMAIL_USER,  // Get email user from .env file
-      pass: process.env.EMAIL_PASS,  // Get email pass from .env file
+      user: process.env.EMAIL_USER,  
+      pass: process.env.EMAIL_PASS,  
     },
   });
 
@@ -46,7 +46,7 @@ app.post('/backend/server/server', async (req, res) => {
           <p style="color: #333; font-size: 16px;"><strong>Message:</strong></p>
           <p style="color: #555; font-size: 16px;">${message}</p>
         </div>
-        <p style="font-size: 12px; color: #777; margin-top: 20px;">This email was sent from your contact form.</p>
+        <p style="font-size: 12px; color: #777; margin-top: 20px;">This email was sent from your contact form.Please connect the talk with your client to start a conversation with your work and grow your career.</p>
       </div>
     `,
   };
