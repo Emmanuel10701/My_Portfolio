@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "backend": "nodemon server.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -16,6 +17,7 @@
     "@mui/material": "^6.2.1",
     "@react-three/drei": "^9.114.3",
     "@react-three/fiber": "^8.17.10",
+    "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
@@ -39,6 +41,7 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.2",
     "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
     "eslint": "^9.11.1",
     "eslint-plugin-react": "^7.37.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",

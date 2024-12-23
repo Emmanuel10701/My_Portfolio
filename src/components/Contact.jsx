@@ -34,7 +34,7 @@ const Contact = () => {
 
     try {
       // Send form data to the backend API (Assuming the API is located at '/api/sendEmail')
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/service/api", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

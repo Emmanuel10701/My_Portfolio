@@ -1,17 +1,19 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
-const dotenv = require('dotenv');
+import express, { json } from 'express';
+import { createTransport } from 'nodemailer';
+import { config } from 'dotenv';
+import cors from 'cors';
 
 // Load environment variables from .env file
-dotenv.config();
+config();
 
 const app = express();
 
-// Middleware to parse JSON request body
-app.use(express.json());
+// Middleware
+app.use(cors());  // Enable CORS to allow requests from frontend
+app.use(json());  // Parse JSON requests
 
 // POST route for sending email
-app.post('/api/contact', async (req, res) => {
+app.post('/backend/server/server', async (req, res) => {
   const { name, email, message } = req.body;
 
   // Validate input fields
@@ -20,7 +22,7 @@ app.post('/api/contact', async (req, res) => {
   }
 
   // Create a transporter using SMTP service (e.g., Gmail)
-  const transporter = nodemailer.createTransport({
+  const transporter = createTransport({
     service: 'gmail',
     auth: {
       user: process.env.EMAIL_USER,  // Get email user from .env file
