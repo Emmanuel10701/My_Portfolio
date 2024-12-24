@@ -3,7 +3,6 @@ import { CircularProgress } from '@mui/material';
 import { Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import resume from '../assets/resume.pdf';  // Import the resume file from the assets folder
-import { styles } from "../styles"; // Assuming you have styles defined in your project
 
 const Hero = () => {
   const [isDownloading, setIsDownloading] = useState(false);
@@ -29,19 +28,18 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative w-full h-screen mx-auto flex flex-col justify-center items-center">
+    <div className=" w-full h-screen mx-auto flex flex-col justify-center items-center">
       {/* Hero Section */}
-      <section className="relative w-full h-full flex flex-col justify-center items-center">
-        <div className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col md:flex-row items-start gap-5`}>
+      <section className=" w-full h-full flex flex-col justify-center items-center">
+        <div className={" inset-0  max-w-7xl mx-auto  flex flex-col md:flex-row items-start gap-5"}>
           <div className="flex flex-col justify-center items-center mt-5">
             <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
-            <div className="w-1 sm:h-80 h-40 violet-gradient" />
           </div>
 
           {/* Hero Text */}
-          <div className="md:mt-[6%] md:mb-[6%] mb-6 text-left md:max-w-2xl lg:max-w-3xl">
-            <h1 className={`${styles.heroHeadText} text-white text-3xl sm:text-4xl md:text-5xl lg:text-5xl`}>
-              Hi, I'm <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">Emmanuel</span>
+          <div className=" md:mt-[2%] md:mb-[2%] mb-6 text-left md:max-w-2xl lg:max-w-3xl">
+            <h1 className={` text-white text-3xl sm:text-4xl md:text-5xl lg:text-5xl`}>
+              Hi, I'm <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent font-extrabold">Emmanuel</span>
             </h1>
             <p className="mt-2 text-white-100 text-base  sm:text-md md:text-lg lg:text-xl">
               I am a full-stack developer specializing in front-end technologies like React and Next.js, back-end systems with Django and Node.js, and data management with SQL and NoSQL databases. Additionally, I explore machine learning with TensorFlow to build neural networks for intelligent web applications.
@@ -50,7 +48,7 @@ const Hero = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute xs:bottom-10 mt-12 bottom-32 w-full flex justify-center items-center">
+        <div className=" xs:bottom-10 mt-12 bottom-32 w-full flex justify-center items-center">
           <a href="#about">
             <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
               <motion.div
@@ -63,7 +61,7 @@ const Hero = () => {
         </div>
 
         {/* Buttons Section */}
-        <div className="absolute bottom-16 w-full flex flex-col md:flex-row justify-center gap-10 sm:gap-16 md:gap-20 mt-10">
+        <div className=" flex w-full justify-center gap-10 sm:gap-16 md:gap-20 mt-10">
           <button
             type="button"
             onClick={handleClick}

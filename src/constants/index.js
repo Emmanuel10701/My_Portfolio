@@ -137,7 +137,7 @@ import {
       company_name: "Dedan Kimathi University of Technology",
       icon: starbucks,
       iconBg: "#383E56",
-      date: "Jan 2023 - Dec 2023",
+      date: "Jan 2024 - Nov 2024",
       points: [
         "Designed and developed responsive websites using HTML, CSS, JavaScript, and React.",
         "Implemented backend services with Django and integrated them with frontend components.",
@@ -151,7 +151,7 @@ import {
       company_name: "Open Source Projects",
       icon: tesla,
       iconBg: "#E6DEDD",
-      date: "Feb 2022 - Present",
+      date: "Feb 2024 - Present",
       points: [
         "Built full-stack applications using Next.js, integrating frontend React components with backend API services.",
         "Optimized performance and SEO through server-side rendering and static site generation.",
@@ -165,7 +165,7 @@ import {
       company_name: "My Projects",
       icon: shopify,
       iconBg: "#383E56",
-      date: "Jan 2021 - Dec 2022",
+      date: "Mar 2024 - Nov 2024",
       points: [
         "Built dynamic and scalable frontend applications using React JS, focusing on reusability and performance.",
         "Utilized React's component-based architecture to create modular and maintainable user interfaces.",
@@ -179,7 +179,7 @@ import {
       company_name: "My Projects",
       icon: meta,
       iconBg: "#E6DEDD",
-      date: "Mar 2020 - Jan 2021",
+      date: "Mar 2024 - Nov 2024",
       points: [
         "Developed backend services using Django and Django REST Framework for creating RESTful APIs.",
         "Integrated machine learning models built with TensorFlow to enhance web application functionality.",
