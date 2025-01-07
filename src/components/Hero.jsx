@@ -4,28 +4,7 @@ import { Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import resume from '../assets/resume.pdf';  // Import the resume file from the assets folder
 
-const Hero = () => {
-  const [isDownloading, setIsDownloading] = useState(false);
-  const [isProcessing, setIsProcessing] = useState(false);
 
-  const handleClick = () => {
-    setIsProcessing(true);
-    setTimeout(() => {
-      window.location.href = "#contact"; // React-based routing
-      setIsProcessing(false);
-    }, 2000);
-  };
-
-  const handleDownload = () => {
-    setIsDownloading(true);
-    setTimeout(() => {
-      const link = document.createElement('a');
-      link.href = resume; // Use the imported resume file path
-      link.download = 'emmanuel-resume.pdf'; // Set the filename for download
-      link.click();
-      setIsDownloading(false);
-    }, 2000);
-  };
 
   return (
     <div className=" w-full h-screen mx-auto flex flex-col justify-center items-center">
@@ -58,30 +37,7 @@ const Hero = () => {
               />
             </div>
           </a>
-        </div>
-
-        {/* Buttons Section */}
-        <div className=" flex w-full justify-center gap-10 sm:gap-16 md:gap-20 mt-10">
-          <button
-            type="button"
-            onClick={handleClick}
-            className="bg-gradient-to-r from-teal-600 to-blue-500 hover:from-teal-700 hover:to-blue-600 text-white py-2 px-4 w-40 sm:w-44 md:w-48 lg:w-52 rounded-full text-sm md:text-base lg:text-lg flex items-center justify-center"
-            disabled={isProcessing}
-          >
-            {isProcessing ? <CircularProgress size={24} color="inherit" className="mr-2" /> : 'Contact Me'}
-            {isProcessing && <span>Processing...</span>}
-          </button>
-          <button
-            type="button"
-            onClick={handleDownload}
-            className="bg-gray-200 text-gray-800 py-2 px-4 w-40 sm:w-44 md:w-48 lg:w-52 rounded-full text-sm md:text-base lg:text-lg flex items-center justify-center gap-2"
-            disabled={isDownloading}
-          >
-            {isDownloading ? <CircularProgress size={24} color="inherit" className="mr-2" /> : 'My Resume'}
-            {isDownloading && <span>Downloading...</span>}
-            <Download />
-          </button>
-        </div>
+        </div>      
       </section>
     </div>
   );
