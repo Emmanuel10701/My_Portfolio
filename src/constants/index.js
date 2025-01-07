@@ -52,7 +52,7 @@ import {
       icon: web,
     },
     {
-      title: "Database Management ",
+      title: "Database Management and DevOps",
       icon: mobile,
     },
     {
