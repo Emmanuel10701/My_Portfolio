@@ -44,16 +44,15 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-   <motion.p
+<motion.p
   variants={fadeIn('', '', 0.1, 1)}
   className='mt-4 text-secondary text-[15px] sm:text-[15px] md:text-[16px] max-w-3xl leading-[28px]'
 >
-  Hello, I'm Emmanuel, a dedicated full-stack engineer with expertise in Django, Python, React, Next.js, and backend system implementation. 
-  I have a strong command of Tailwind CSS for responsive and modern design and a basic understanding of machine learning concepts using TensorFlow. 
-  I’m passionate about creating efficient and scalable solutions that bridge functionality and aesthetics.
-
-  Currently, at Upnxy Innovative Solutions, I’m sharpening my skills by engineering AI-driven marketing systems, working across API integrations, WebSocket features, and intelligent data workflows.
+  I’m Emmanuel, a passionate full-stack engineer working with Python, Django, React, Next.js, JavaScript, and modern UI tools like Tailwind CSS.  
+  I specialize in API integrations, DevOps pipelines, PostgreSQL/MySQL databases, data scraping with LLMs and Azure, and ML principles using TensorFlow.  
+  At Upnxy Innovative Solutions, I’m building AI-powered systems, enhancing backend workflows, and collaborating on end-to-end product development.
 </motion.p>
+
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
