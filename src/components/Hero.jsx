@@ -23,7 +23,7 @@ const Hero = () => {
                 Emmanuel
               </span>
             </h1>
-         <p className="mt-2 text-white-100 text-sm sm:text-sm md:text-base lg:text-lg">
+         <p className="mt-2 text-white-100 text-sm sm:text-sm md:text-sm lg:text-md">
           I am a full-stack developer specializing in front-end technologies like React and Next.js, 
           back-end systems with Django and Node.js, and data management with SQL and NoSQL databases. 
           I have hands-on experience with DevOps practices, including setting up CI/CD pipelines using Jenkins and GitLab, 
