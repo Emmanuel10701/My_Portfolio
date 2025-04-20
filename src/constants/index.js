@@ -146,20 +146,21 @@ import {
         "Focused on maintaining a clean codebase and following best practices for scalability and performance.",
       ],
     },
-    {
-      title: "Next.js Full-Stack Developer",
-      company_name: "Open Source Projects",
-      icon: tesla,
-      iconBg: "#E6DEDD",
-      date: "Feb 2024 - Present",
-      points: [
-        "Built full-stack applications using Next.js, integrating frontend React components with backend API services.",
-        "Optimized performance and SEO through server-side rendering and static site generation.",
-        "Implemented authentication, state management, and API integrations to enhance functionality.",
-        "Contributed to open-source projects, focusing on scalable web applications and UI/UX improvements.",
-        "Worked closely with other developers to ensure clean, maintainable code with unit and integration tests.",
-      ],
-    },
+   {
+  title: "Django & Next.js Full-Stack Engineer",
+  company_name: "Open Source Projects",
+  icon: tesla,
+  iconBg: "#E6DEDD",
+  date: "Feb 2024 - Present",
+  points: [
+    "Developed full-stack web applications using Next.js for the frontend and Django for the backend.",
+    "Integrated Django REST Framework APIs with Next.js, ensuring seamless data flow between client and server.",
+    "Enhanced performance and SEO using Next.js features like server-side rendering (SSR) and static site generation (SSG).",
+    "Implemented secure authentication, role-based access control, and state management using tools like NextAuth.js and Redux.",
+    "Collaborated on open-source projects with a focus on scalable architectures, responsive UI/UX design, and clean, testable code.",
+  ],
+}
+,
     {
       title: "Frontend Developer with React",
       company_name: "My Projects",
