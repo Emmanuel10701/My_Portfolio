@@ -23,13 +23,18 @@ const Hero = () => {
                 Emmanuel
               </span>
             </h1>
-            <p className="mt-2 text-white-100 text-base sm:text-md md:text-lg lg:text-xl">
-              I am a full-stack developer specializing in front-end technologies like React and Next.js, 
-              back-end systems with Django and Node.js, and data management with SQL and NoSQL databases. 
-              I have hands-on experience with DevOps practices, including setting up CI/CD pipelines using Jenkins and GitLab, 
-              ensuring efficient deployment and continuous delivery. Additionally, I explore machine learning with TensorFlow 
-              to build neural networks for intelligent web applications.
-            </p>
+         <p className="mt-2 text-white-100 text-sm sm:text-sm md:text-base lg:text-lg">
+          I am a full-stack developer specializing in front-end technologies like React and Next.js, 
+          back-end systems with Django and Node.js, and data management with SQL and NoSQL databases. 
+          I have hands-on experience with DevOps practices, including setting up CI/CD pipelines using Jenkins and GitLab, 
+          ensuring efficient deployment and continuous delivery. Additionally, I explore machine learning with TensorFlow 
+          to build neural networks for intelligent web applications.
+        
+          At Upnxy Innovative Solutions, I’m expanding my skills in integrating real-time systems using WebSockets and REST APIs.  
+          I'm gaining strong backend expertise by building scalable APIs with PostgreSQL and Django.  
+          I'm also working alongside AI teams, contributing to intelligent automation through Azure LLMs and advanced web scraping.
+        </p>
+
 
           </div>
         </div>
