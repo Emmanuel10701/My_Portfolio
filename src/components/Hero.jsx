@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { CircularProgress } from '@mui/material';
 import { Download } from 'lucide-react';
 import { motion } from 'framer-motion';
-import resume from '../assets/resume.pdf';
+import resume from '../assets/resume.pdf'; // Import the resume file from the assets folder
 
+// Define the Hero component
 const Hero = () => {
   return (
     <div className="w-full h-screen mx-auto flex flex-col justify-center items-center">
@@ -37,8 +38,8 @@ const Hero = () => {
               I'm also working alongside AI teams, contributing to intelligent automation through Azure LLMs and advanced web scraping.
             </p>
           </div>
-        </div> {/* <-- ✅ This was missing before */}
-        
+        </div>
+
         {/* Scroll Indicator */}
         <div className="xs:bottom-10 mt-12 bottom-32 w-full flex justify-center items-center">
           <a href="#about">
