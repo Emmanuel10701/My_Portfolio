@@ -148,7 +148,7 @@ import {
     "Built web scraping solutions using BeautifulSoup and leveraged Azure LLMs for intelligent automation tasks.",
   ],
 }
-
+,
    {
   title: "Django & Next.js Full-Stack Engineer",
   company_name: "Open Source Projects",
