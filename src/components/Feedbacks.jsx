@@ -44,7 +44,6 @@ const FeedbackCard = ({
 );
 
 const Feedbacks = () => {
-const Feedbacks = () => {
   return (
     <div className="mt-12 bg-black-100 rounded-[20px]">
       <div className="bg-tertiary rounded-2xl px-6 py-10 min-h-[300px]">
@@ -52,7 +51,7 @@ const Feedbacks = () => {
           <p className="text-secondary text-[15px] sm:text-[15px] md:text-[16px] max-w-3xl leading-[28px]">
             Educational Background
           </p>
-          <h2 className="text-white text-[20px] sm:text-[22px] md:text-[24px] font-semibold">
+          <h2 className="text-white text-[30px] sm:text-[34px] md:text-[36px] lg:text-[40px] font-semibold">
             University and School.
           </h2>
         </motion.div>
@@ -65,6 +64,5 @@ const Feedbacks = () => {
     </div>
   );
 };
-
 
 export default SectionWrapper(Feedbacks, "");
