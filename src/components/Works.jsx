@@ -54,16 +54,7 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2 items-center">
-          {live_site_link && (
-            <a
-              href={live_site_link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[14px] text-blue-500 underline mr-2"
-            >
-              Live Site
-            </a>
-          )}
+     
 
           {tags.map((tag) => (
             <p
