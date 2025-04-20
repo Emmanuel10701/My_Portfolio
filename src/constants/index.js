@@ -152,7 +152,7 @@ import {
    {
   title: "Django & Next.js Full-Stack Engineer",
   company_name: "Open Source Projects",
-  icon: tesla,
+  icon: starbucks,
   iconBg: "#E6DEDD",
   date: "Feb 2024 - Present",
   points: [
