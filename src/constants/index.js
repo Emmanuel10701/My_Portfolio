@@ -132,20 +132,23 @@ import {
   ];
   
   const experiences = [
-    {
-      title: "Full-Stack Developer",
-      company_name: "Dedan Kimathi University of Technology",
-      icon: starbucks,
-      iconBg: "#383E56",
-      date: "Jan 2024 - Nov 2024",
-      points: [
-        "Designed and developed responsive websites using HTML, CSS, JavaScript, and React.",
-        "Implemented backend services with Django and integrated them with frontend components.",
-        "Ensured optimal performance and responsiveness across all devices and screen sizes.",
-        "Collaborated with cross-functional teams to improve web application features and user experiences.",
-        "Focused on maintaining a clean codebase and following best practices for scalability and performance.",
-      ],
-    },
+{
+  title: "Software Engineer",
+  company_name: "Upnxy Innovative Solutions, India",
+  icon: tesla,
+  iconBg: "#E6DEDD",
+  date: "Feb 2024 - Present",
+  points: [
+    "Developed full-stack solutions for an AI-powered marketing automation software using modern backend and frontend technologies.",
+    "Created scalable RESTful APIs and implemented WebSocket communication for real-time features.",
+    "Integrated secure and user-friendly payment gateways to enhance customer experience and monetization.",
+    "Coordinated with the frontend team to ensure seamless API integration and data flow across the platform.",
+    "Collaborated with the data science team to retrieve and process relevant datasets for AI model training.",
+    "Used PostgreSQL for database management and implemented CI/CD pipelines for streamlined deployments.",
+    "Built web scraping solutions using BeautifulSoup and leveraged Azure LLMs for intelligent automation tasks.",
+  ],
+}
+
    {
   title: "Django & Next.js Full-Stack Engineer",
   company_name: "Open Source Projects",
