@@ -233,17 +233,16 @@ import {
           color: "blue-text-gradient",
         },
         {
-          name: "nodejs",
+          name: "Django",
           color: "green-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "Mysql",
           color: "pink-text-gradient",
         },
       ],
       image: doctor, // Using the imported doctor image
       source_code_link: "https://github.com/Emmanuel10701/Healthcare-",
-      live_site_link: "https://healthcare-project-sepia.vercel.app/",
     },
     {
       name: "Blog",
@@ -251,7 +250,7 @@ import {
         "A dynamic blog platform allowing users to post and manage articles.",
       tags: [
         {
-          name: "react",
+          name: "Next js",
           color: "blue-text-gradient",
         },
         {
@@ -265,7 +264,6 @@ import {
       ],
       image: blog, // Using the imported blog image
       source_code_link: "https://github.com/Emmanuel10701/developers_blog",
-      live_site_link: "https://developers-home.vercel.app/",
     },
     {
       name: "Rental",
@@ -287,7 +285,6 @@ import {
       ],
       image: rental, // Using the imported rental image
       source_code_link: "https://github.com/Emmanuel10701/Apartments",
-      live_site_link: "https://apartments-site-rental.vercel.app/",
     },
   ];
   
