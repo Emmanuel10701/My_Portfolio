@@ -46,12 +46,17 @@ const Contact = () => {
         {/* Paragraph Section */}
         <div className='flex flex-col gap-6 mt-6'>
         <div>
-        <p className="text-white text-lg">
-          As a junior full-stack developer, I am passionate about building modern, responsive applications. With a solid foundation in both frontend and backend development, I strive to create solutions that meet your business needs while ensuring scalability and efficiency.
-        </p>
-        <p className="text-white text-lg mt-4">
-          While I currently have a basic understanding of Artificial Intelligence, I am committed to growing my expertise in this field. In the years to come, I hope to help businesses like yours integrate AI features that enhance productivity and drive innovation. Let’s work together to lay the groundwork for a tech-savvy future.
-        </p>
+   <p className="text-secondary text-[15px] sm:text-[15px] md:text-[16px] max-w-3xl leading-[28px]">
+  As a junior full-stack engineer, I am passionate about building modern, responsive applications. 
+  With a solid foundation in both frontend and backend development, I strive to create solutions that meet your business needs while ensuring scalability and efficiency.
+</p>
+
+<p className="text-secondary text-[15px] sm:text-[15px] md:text-[16px] max-w-3xl leading-[28px] mt-4">
+  While I currently have a basic understanding of Artificial Intelligence, I am committed to growing my expertise in this field. 
+  In the years to come, I hope to help businesses like yours integrate AI features that enhance productivity and drive innovation. 
+  Let’s work together to lay the groundwork for a tech-savvy future.
+</p>
+
       </div>
 
         </div>
