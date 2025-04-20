@@ -44,17 +44,20 @@ const FeedbackCard = ({
 );
 
 const Feedbacks = () => {
+const Feedbacks = () => {
   return (
-    <div className={`mt-12 bg-black-100 rounded-[20px]`}>
-      <div
-        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
-      >
+    <div className="mt-12 bg-black-100 rounded-[20px]">
+      <div className="bg-tertiary rounded-2xl px-6 py-10 min-h-[300px]">
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>Educational Background</p>
-          <h2 className={styles.sectionHeadText}>University and School.</h2>
+          <p className="text-secondary text-[15px] sm:text-[15px] md:text-[16px] max-w-3xl leading-[28px]">
+            Educational Background
+          </p>
+          <h2 className="text-white text-[20px] sm:text-[22px] md:text-[24px] font-semibold">
+            University and School.
+          </h2>
         </motion.div>
       </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+      <div className="-mt-20 pb-14 px-6 sm:px-10 flex flex-wrap gap-7">
         {testimonials.map((testimonial, index) => (
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}
@@ -62,5 +65,6 @@ const Feedbacks = () => {
     </div>
   );
 };
+
 
 export default SectionWrapper(Feedbacks, "");
