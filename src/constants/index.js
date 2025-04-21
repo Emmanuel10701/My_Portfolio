@@ -139,9 +139,9 @@ import {
   iconBg: "#E6DEDD",
   date: "Feb 2024 - March 2025",
   points: [
-    "Developed full-stack solutions for an AI-powered marketing automation software using modern backend and frontend technologies.",
-    "Created scalable RESTful APIs and implemented WebSocket communication for real-time features.",
-    "Integrated secure and user-friendly payment gateways to enhance customer experience and monetization.",
+    "Developed full-stack solutions for an AI-powered marketing automation software using modern backend using Python and Django and frontend technologies Using React.",
+    "Created scalable RESTful APIs and implemented WebSocket communication for real-time features using Django channels.",
+    "Integrated secure and user-friendly payment gateways to enhance customer experience and monetization using stripe and Rozarpay.",
     "Coordinated with the frontend team to ensure seamless API integration and data flow across the platform.",
     "Collaborated with the data science team to retrieve and process relevant datasets for AI model training.",
     "Used PostgreSQL for database management and implemented CI/CD pipelines for streamlined deployments.",
