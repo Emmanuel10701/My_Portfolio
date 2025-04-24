@@ -25,7 +25,7 @@ const Hero = () => {
             </h1>
 
             <p className="mt-4 text-secondary text-[15px] sm:text-[15px] md:text-[16px] max-w-3xl leading-[28px]">
-              I am a full-stack developer specializing in front-end technologies like React and Next.js, 
+              I am a full-stack software engineer specialized in front-end technologies like React and Next.js, 
               back-end systems with Django and Node.js, and data management with SQL and NoSQL databases. 
               I have hands-on experience with DevOps practices, including setting up CI/CD pipelines using Jenkins and GitLab, 
               ensuring efficient deployment and continuous delivery. Additionally, I explore machine learning with TensorFlow 
