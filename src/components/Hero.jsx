@@ -16,7 +16,7 @@ const Hero = () => {
           </div>
 
           {/* Hero Text */}
-          <div className="md:mt-[2%] md:mb-[2%] mb-6 text-left md:max-w-2xl lg:max-w-3xl">
+          <div className="md:mt-[2%] md:mb-[2%] mt-[2%] mb-6 text-left md:max-w-2xl lg:max-w-3xl">
             <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-5xl">
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent font-extrabold">
