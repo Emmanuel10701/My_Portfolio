@@ -137,7 +137,7 @@ import {
   company_name: "Upnxy Innovative Solutions, India",
   icon: tesla,
   iconBg: "#E6DEDD",
-  date: "Feb 2024 - March 2025",
+  date: "Feb 2024 - Present",
   points: [
     "Developed full-stack solutions for an AI-powered marketing automation software using modern backend using Python and Django and frontend technologies Using React.",
     "Created scalable RESTful APIs and implemented WebSocket communication for real-time features using Django channels.",
