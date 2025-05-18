@@ -133,13 +133,13 @@ import {
   
   const experiences = [
 {
-  title: "Software Engineer",
+  title: "Software Engineer Internship",
   company_name: "Upnxy Innovative Solutions, India",
   icon: tesla,
   iconBg: "#E6DEDD",
   date: "Feb 2025 - Present",
   points: [
-    "Developed full-stack solutions for an AI-powered marketing automation software using modern backend using Python and Django and frontend technologies Using React.",
+    "Developed full-stack solutions for an AI-powered marketing automation software using modern backend using Python and Django and frontend technologies Using React in part of my  internship. ",
     "Created scalable RESTful APIs and implemented WebSocket communication for real-time features using Django channels.",
     "Integrated secure and user-friendly payment gateways to enhance customer experience and monetization using stripe and Rozarpay.",
     "Coordinated with the frontend team to ensure seamless API integration and data flow across the platform.",
@@ -151,7 +151,7 @@ import {
 ,
    {
   title: "Django & Next.js Full-Stack Engineer",
-  company_name: "Open Source Projects",
+  company_name: "Open Source Projects contributions",
   icon: starbucks,
   iconBg: "#E6DEDD",
   date: "Feb 2024 - Present",
