@@ -199,7 +199,7 @@ import {
       testimonial:
         "At Dedan Kimathi University of Technology, I excelled academically and developed a strong passion for full-stack software development, which fueled my career aspirations.",
       name: "Dedan Kimathi University of Technology",
-      designation: "[2022-2025]",
+      designation: "[2023-2026]",
       company: "Student with Academic Excellence and Passion for Full-Stack Development",
       image: University,
     },
@@ -207,7 +207,7 @@ import {
       testimonial:
         "My time at Dedan Kimathi University of Technology helped me focus on leadership and academic growth, preparing me to contribute effectively in various activities.",
       name: "Dedan Kimathi University of Technology",
-      designation: "[2023-2025]",
+      designation: "[2023-2026]",
       company: "Leadership and Academic Excellence",
       image: University,
     },
@@ -215,7 +215,7 @@ import {
       testimonial:
         "Currently pursuing a degree in Mathematics and Statistics, I’m building a strong foundation in data analysis, statistics, and software development, fueling my passion for technology.",
       name: "Dedan Kimathi University of Technology",
-      designation: "[2023-2025]",
+      designation: "[2023-2026]",
       company: "Undergraduate Student",
       image: University,
     },
