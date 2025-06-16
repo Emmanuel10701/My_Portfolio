@@ -213,7 +213,7 @@ import {
     },
     {
       testimonial:
-        "Currently pursuing a degree in Mathematics and Statistics, I’m building a strong foundation in data analysis, statistics, and software development, fueling my passion for technology.",
+        "Currently pursuing a degree in Mathematics and Statistics, I’m building a strong foundation in software development, data analysis, and devops fueling my passion for technology.",
       name: "Dedan Kimathi University of Technology",
       designation: "[2023-2026]",
       company: "Undergraduate Student",
